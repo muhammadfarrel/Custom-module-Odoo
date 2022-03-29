@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- res.partner inherit form view -->
+    <record id="res_partner_view_id" model="ir.ui.view">
+        <field name="name">res.partner.inherit.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Add your xpath here -->
+            <field name="vat" position="after">
+                <field name="is_customernya"/>
+            </field>            
+        </field>
+    </record>
+
     <!-- model.name inherit search view -->
     <record id="res_partner_customer_inherit_search" model="ir.ui.view">
         <field name="name">res.partner.inherit.view.search</field>
