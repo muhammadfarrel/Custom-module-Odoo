@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- toko.served tree view -->
+    <record id="toko_served_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Sajikan</field>
+        <field name="model">toko.served</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="order_id"/>
+                <field name="name"/>
+                <field name="tgl_sajikan"/>
+                <field name="tagihan"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- toko.served form view -->
+    <record id="toko_served_view_form" model="ir.ui.view">
+        <field name="name">Form Sajikan</field>
+        <field name="model">toko.served</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="order_id"/>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="tgl_sajikan"/>
+                    </group>
+                    <group>
+                        <field name="tagihan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- toko.served action window -->
+    <record id="toko_served_action" model="ir.actions.act_window">
+        <field name="name">Sajikan Makanan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.served</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="toko_served_menu_act" 
+        name="Sajikan" 
+        parent="toko_pemesanan_menu_categ" 
+        action="toko_served_action" 
+        sequence="20"/>
+
+</odoo>

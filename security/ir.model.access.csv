@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_toko_makanan,access.toko.makanan,model_toko_makanan,,1,1,1,1
+access_toko_minuman,access.toko.minuman,model_toko_minuman,,1,1,1,1
+access_toko_paket,access.toko.paket,model_toko_paket,,1,1,1,1
+access_toko_order,access.toko.order,model_toko_order,,1,1,1,1
+access_toko_orderpaketdetail,access.toko.orderpaketdetail,model_toko_orderpaketdetail,,1,1,1,1
+access_toko_ordermakanandetail,access.toko.ordermakanandetail,model_toko_ordermakanandetail,,1,1,1,1
+access_toko_orderminumandetail,access.toko.orderminumandetail,model_toko_orderminumandetail,,1,1,1,1
+access_toko_served,access.toko.served,model_toko_served,,1,1,1,1
+access_toko_akunting,access.toko.akunting,model_toko_akunting,,1,1,1,1

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- toko.minuman tree view -->
+    <record id="toko_minuman_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Minuman</field>
+        <field name="model">toko.minuman</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="tipe"/>
+                <field name="deskripsi"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- toko.minuman form view -->
+    <record id="toko_minuman_view_form" model="ir.ui.view">
+        <field name="name">Form Makanan</field>
+        <field name="model">toko.minuman</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="tipe"/>
+                    </group>
+                    <group>
+                        <field name="deskripsi"/>
+                    </group>
+                    <group>
+                        <field name="harga"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- toko.minuman action window -->
+    <record id="toko_minuman_action" model="ir.actions.act_window">
+        <field name="name">Minuman</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.minuman</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="toko_minuman_menu_act" 
+        name="Minuman" 
+        parent="toko_kategori_menu_categ" 
+        action="toko_minuman_action" 
+        sequence="20"/>
+
+</odoo>
