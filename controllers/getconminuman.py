@@ -2,13 +2,13 @@ from odoo import http, fields, models
 from odoo.http import request
 import json
 
-class MakananCon(http.Controller):
+class MinumanCon(http.Controller):
     @http.route(['/minuman','/minuman/<int:idnya>'], auth='public', methods=['GET'], csrf=True)
     def getMinuman(self, idnya=None, **kwargs):
         value = []
         if not idnya:
-            makanan = request.env['toko.minuman'].search([])            
-            for m in makanan:
+            minuman = request.env['toko.minuman'].search([])            
+            for m in minuman:
                 value.append({"id": m.id,
                             "nama_minuman" : m.name,
                             "tipe_minuman" : m.tipe,
@@ -16,8 +16,8 @@ class MakananCon(http.Controller):
                             "harga" : m.harga})
             return json.dumps(value)
         else:
-            makananid = request.env['toko.minuman'].search([('id','=',idnya)])
-            for m in makananid:
+            minumanid = request.env['toko.minuman'].search([('id','=',idnya)])
+            for m in minumanid:
                 value.append({"id": m.id,
                             "nama_minuman" : m.name,
                             "tipe_minuman" : m.tipe,

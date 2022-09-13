@@ -30,6 +30,7 @@
                         <field name="name"/>
                         <field name="makanan_id"/>
                         <field name="minuman_id"/>
+                        <field name="channel_id" options="{'no_open': True}"/>
                     </group>
                     <group>
                         <field name="stok"/>

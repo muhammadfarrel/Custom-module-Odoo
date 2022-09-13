@@ -11,6 +11,9 @@ class Paket(models.Model):
                                 string='Makanan')
     minuman_id = fields.Many2one(comodel_name='toko.minuman', 
                                 string='Minuman')
+    channel_id = fields.Many2one('ir.model.fields', 
+                                string='Channel',
+                                domain=[('relation','=', '')])
     
     stok = fields.Integer(string='Stok Paket')
     deskripsi = fields.Char(string='Deskripsi')
